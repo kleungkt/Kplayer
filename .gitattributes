@@ -1,0 +1,9 @@
+"VLCHELPER.ipch" filter=lfs diff=lfs merge=lfs -text
+"WIDGET.ipch" filter=lfs diff=lfs merge=lfs -text
+"MAIN.ipch" filter=lfs diff=lfs merge=lfs -text
+./.vs/VideoPlayer/v16/ipch/AutoPCH/fb0460bdea80b916/VLCHELPER.ipch filter=lfs diff=lfs merge=lfs -text
+./.vs/VideoPlayer/v16/ipch/AutoPCH/4dd969097ce00fad/WIDGET.ipch filter=lfs diff=lfs merge=lfs -text
+./.vs/VideoPlayer/v16/ipch/AutoPCH/fb560d39ff172508/MAIN.ipch filter=lfs diff=lfs merge=lfs -text
+"VLCHELPER.ipch" filter=lfs diff=lfs merge=lfs -text
+"WIDGET.ipch" filter=lfs diff=lfs merge=lfs -text
+"MAIN.ipch" filter=lfs diff=lfs merge=lfs -text

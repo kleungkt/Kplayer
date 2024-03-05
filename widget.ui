@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));</string>
+  </property>
+  <widget class="QMediaPlayer" name="media">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>45</y>
+     <width>1200</width>
+     <height>690</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>90</y>
+     <width>300</width>
+     <height>710</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget{
+	background-color: rgb(72, 71, 76); 
+}
+QListWidget::Item{ 
+	padding-bottom:4px; padding-bottom:4px; background-color:rgb(72, 71, 76);
+	color: rgb(218, 218, 229);
+}
+QListWidget::Item:hover{
+	padding-top:4px; padding-bottom:4px; background-color: rgb(85, 255, 255); 
+}
+QListWidget::item:selected{
+	padding-top:4px; padding-bottom:4px; background-color: rgb(55, 56, 61); 
+	color:rgb(61,163,241); 
+}
+QListWidget::item:selected:!active{
+	padding-top:4px; padding-bottom:4px; background-color:rgb(72, 71, 76);
+	color:rgb(122,122,128); 
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::MultiSelection</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>732</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+	background: rgb(121,121,128);
+	height: 4px;
+}
+
+QSlider::sub-page:horizontal {
+	background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1, stop: 0 rgb(61,163,241), stop: 1 rgb(36,95,207));
+	height: 4px;
+}
+QSlider::groove:horizontal:hover {
+	background: rgb(121,121,128);
+	height: 8px;
+}
+
+QSlider::sub-page:horizontal:hover {
+	background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1, stop: 0 rgb(61,163,241), stop: 1 rgb(36,95,207));
+	height: 8px;
+}
+QSlider::add-page:horizontal {
+	background: #575757;
+	border: 0px solid #777;
+	height: 10px;
+	border-radius: 2px;
+}
+
+QSlider::handle:horizontal 
+{
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, 
+stop:0.6 rgb(61,163,241), stop:0.778409 rgb(255, 255, 255));
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA, 
+    stop:0.778409 rgba(255, 255, 255, 255));
+
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+	background: #00009C;
+	border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+	background: #eee;
+	border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+	background: #eee;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+}</string>
+   </property>
+   <property name="value">
+    <number>50</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="playButton">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: url(:/ui/button/blue/UI/blue/start_playing.png);
+}
+QPushButton:hover{
+	border-image: url(:/ui/button/gray/UI/grey/start_playing.png);
+}
+QPushButton:pressed{
+	border-image: url(:/ui/button/white/UI/white/start_playing.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="preButton">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: url(:/UI/images/shangyige.png);
+	background-color: transparent;
+}
+QPushButton:hover{
+	border-image: url(:/UI/images/shangyige-hover.png);
+	background-color: transparent;
+}
+QPushButton:pressed{
+	border-image: url(:/UI/images/shangyige.png);
+	background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nextButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: url(:/UI/images/xiayige.png);
+	background-color: transparent;
+}
+QPushButton:hover{
+	border-image: url(:/UI/images/xiayige-hover.png);
+	background-color: transparent;
+}
+QPushButton:pressed{
+	border-image: url(:/UI/images/xiayige.png);
+	background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="volumeButton">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#volumeButton{
+border-image: url(:/UI/images/voice.png);
+background-color: transparent;
+}
+QPushButton#volumeButton:hover{border-image: url(:/UI/images/voice-hover.png);background-color: transparent;}
+QPushButton#volumeButton:pressed{border-image: url(:/UI/images/voice.png);background-color: transparent;}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="timeLb">
+   <property name="geometry">
+    <rect>
+     <x>215</x>
+     <y>762</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(194, 194, 204);
+background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>959:59:59</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="volumeSlider">
+   <property name="geometry">
+    <rect>
+     <x>1102</x>
+     <y>595</y>
+     <width>22</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:vertical {
+	border: 1px solid #4A708B;
+	background: #C0C0C0;
+	width: 5px;
+	border-radius: 1px;
+	padding-left:-1px;
+	padding-right:-1px;
+	padding-top:-1px;
+	padding-bottom:-1px;
+}
+
+QSlider::sub-page:vertical {
+	background: #575757;
+	border: 1px solid #4A708B;
+	border-radius: 2px;
+}
+
+QSlider::add-page:vertical {
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+    stop:0 #c4c4c4, stop:1 #B1B1B1);
+	background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #5DCCFF, stop: 1 #1874CD);
+	border: 0px solid #777;
+	width: 10px;
+	border-radius: 2px;
+}
+
+QSlider::handle:vertical 
+{
+	background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #45ADED, 
+	stop:0.778409 rgba(255, 255, 255, 255));
+    height: 11px;
+    margin-left: -3px;
+    margin-right: -3px;
+    border-radius: 5px;
+}
+
+QSlider::sub-page:vertical:disabled {
+	background: #00009C;
+	border-color: #999;
+}
+
+QSlider::add-page:vertical:disabled {
+	background: #eee;
+	border-color: #999;
+}
+
+QSlider::handle:vertical:disabled {
+	background: #eee;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="showhideList">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>320</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/arrow-right.png);background-color: transparent;}
+QPushButton:hover{border-image: url(:/UI/images/arrow-right.png);background-color: transparent;}
+QPushButton:pressed{border-image: url(:/UI/images/arrow-right.png);background-color: transparent;}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="backgroundLb">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>41</y>
+     <width>1500</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="logoLabel">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>5</y>
+     <width>140</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/UI/images/logo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="userInfo">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>7</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/UI/images/headimg-default.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="loginstatus">
+   <property name="geometry">
+    <rect>
+     <x>1270</x>
+     <y>7</y>
+     <width>45</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(194, 194, 204);</string>
+   </property>
+   <property name="text">
+    <string>未登录</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="settingBtn">
+   <property name="geometry">
+    <rect>
+     <x>1340</x>
+     <y>5</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#settingBtn{border-image: url(:/UI/images/shezhi.png);}
+QPushButton#settingBtn:hover{border-image: url(:/UI/images/shezhi-hover.png);} 
+QPushButton#settingBtn:pressed{border-image: url(:/UI/images/shezhi.png);}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="miniButton">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>5</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/suoxiao.png);}
+QPushButton:hover{border-image: url(:/UI/images/suoxiao-hover.png);} 
+QPushButton:pressed{border-image: url(:/UI/images/suoxiao.png);}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fangdaButton">
+   <property name="geometry">
+    <rect>
+     <x>1420</x>
+     <y>5</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/fangda.png);}
+QPushButton:hover{border-image: url(:/UI/images/fangda-hover.png);} 
+QPushButton:pressed{border-image: url(:/UI/images/fangda.png);}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closeButton">
+   <property name="geometry">
+    <rect>
+     <x>1460</x>
+     <y>5</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/close.png);}
+QPushButton:hover{border-image: url(:/UI/images/close-hover.png);} 
+QPushButton:pressed{border-image: url(:/UI/images/close.png);}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playInfo">
+   <property name="geometry">
+    <rect>
+     <x>1202</x>
+     <y>43</y>
+     <width>296</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 94, 97);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playInfoIco">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>41</y>
+     <width>32</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/UI/images/shezhi.png);
+background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="curplay">
+   <property name="geometry">
+    <rect>
+     <x>1235</x>
+     <y>50</y>
+     <width>260</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+font: 10pt &quot;黑体&quot;;
+color: rgb(255, 255, 255);
+
+</string>
+   </property>
+   <property name="text">
+    <string>C语言/C++零基础到大神全栈课学习大全</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: url(:/UI/images/stop.png);
+	background-color: transparent;
+}
+QPushButton:hover{
+	border-image: url(:/UI/images/stop-hover.png);
+	background-color: transparent;
+}
+QPushButton:pressed{
+	border-image: url(:/UI/images/stop.png);
+	background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="time2Lb">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>762</y>
+     <width>105</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(121, 121, 128);
+background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>/999:59:59</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fullscreenBtn">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/quanping.png);background-color: transparent;}
+QPushButton:hover{border-image: url(:/UI/images/quanping-hover.png);background-color: transparent;} 
+QPushButton:pressed{border-image: url(:/UI/images/quanping.png);background-color: transparent;}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="settingButton">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>755</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/bofangshezhi.png);background-color: transparent;}
+QPushButton:hover{border-image: url(:/UI/images/bofangshezhi-hover.png);background-color: transparent;} 
+QPushButton:pressed{border-image: url(:/UI/images/bofangshezhi.png);background-color: transparent;}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="scaleButton">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>755</y>
+     <width>42</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/beisu.png);background-color: transparent;}
+QPushButton:hover{border-image: url(:/UI/images/beisu-hover.png);background-color: transparent;} 
+QPushButton:pressed{border-image: url(:/UI/images/beisu.png);background-color: transparent;}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="autoButton">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>755</y>
+     <width>42</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{border-image: url(:/UI/images/zidong.png);background-color: transparent;}
+QPushButton:hover{border-image: url(:/UI/images/zidong-hover.png);background-color: transparent;} 
+QPushButton:pressed{border-image: url(:/UI/images/zidong.png);background-color: transparent;}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="downbkgndLb">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>800</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(39, 40, 47, 255), stop:1 rgba(40, 42, 53, 255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QScreenTop" name="screentop">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="time2">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>643</y>
+     <width>42</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}
+QPushButton:hover{color:rgb(61,143,241);background-color: rgba(40,40,48,255);} 
+QPushButton:pressed{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}</string>
+   </property>
+   <property name="text">
+    <string>2x</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="time1_5">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>671</y>
+     <width>42</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}
+QPushButton:hover{color:rgb(61,143,241);background-color: rgba(40,40,48,255);} 
+QPushButton:pressed{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}</string>
+   </property>
+   <property name="text">
+    <string>1.5x</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="time1">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>699</y>
+     <width>42</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}
+QPushButton:hover{color:rgb(61,143,241);background-color: rgba(40,40,48,255);} 
+QPushButton:pressed{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}</string>
+   </property>
+   <property name="text">
+    <string>1x</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="time0_5">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>727</y>
+     <width>42</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}
+QPushButton:hover{color:rgb(61,143,241);background-color: rgba(40,40,48,255);} 
+QPushButton:pressed{color:rgb(255,255,255);background-color: rgba(40,40,48,217);}</string>
+   </property>
+   <property name="text">
+    <string>0.5x</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>backgroundLb</zorder>
+  <zorder>media</zorder>
+  <zorder>downbkgndLb</zorder>
+  <zorder>listWidget</zorder>
+  <zorder>horizontalSlider</zorder>
+  <zorder>preButton</zorder>
+  <zorder>nextButton</zorder>
+  <zorder>volumeButton</zorder>
+  <zorder>timeLb</zorder>
+  <zorder>volumeSlider</zorder>
+  <zorder>label</zorder>
+  <zorder>logoLabel</zorder>
+  <zorder>userInfo</zorder>
+  <zorder>loginstatus</zorder>
+  <zorder>settingBtn</zorder>
+  <zorder>miniButton</zorder>
+  <zorder>fangdaButton</zorder>
+  <zorder>closeButton</zorder>
+  <zorder>showhideList</zorder>
+  <zorder>playInfo</zorder>
+  <zorder>playInfoIco</zorder>
+  <zorder>curplay</zorder>
+  <zorder>stopButton</zorder>
+  <zorder>time2Lb</zorder>
+  <zorder>fullscreenBtn</zorder>
+  <zorder>settingButton</zorder>
+  <zorder>scaleButton</zorder>
+  <zorder>autoButton</zorder>
+  <zorder>screentop</zorder>
+  <zorder>time1_5</zorder>
+  <zorder>time2</zorder>
+  <zorder>time1</zorder>
+  <zorder>time0_5</zorder>
+  <zorder>playButton</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QMediaPlayer</class>
+   <extends>QLabel</extends>
+   <header>qmediaplayer.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QScreenTop</class>
+   <extends>QLabel</extends>
+   <header>qscreentop.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
