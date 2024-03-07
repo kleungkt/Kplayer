@@ -5,4 +5,4 @@ Main Technologies: For the client, technologies used included Qwidget, QT networ
 
 Key Functions: The client provides an encrypted video player service for online courses, including features like registration, login, screen control, and screen recording. The server handles network module encapsulation, Epoll design and implementation, thread pool encapsulation, log system design and implementation, database module design, user online and login business process design and implementation, and MySQL database integration.
 
-[!Kplayer UI](https://ik.imagekit.io/kleugnkt/VideoPlayerUI.png?updatedAt=1709022900974)
+![Kplayer UI](https://ik.imagekit.io/kleugnkt/VideoPlayerUI.png?updatedAt=1709022900974)
